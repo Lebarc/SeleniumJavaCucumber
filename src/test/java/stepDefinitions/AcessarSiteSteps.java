@@ -27,4 +27,16 @@ public class AcessarSiteSteps {
         utils.ClassInfo.GetInstance().setResultScenario(Navegar.ValidarDirecionamentoParaElementsPage());
         assertTrue(utils.ClassInfo.GetInstance().getLogMessage(), utils.ClassInfo.GetInstance().getResultScenario());
     }
+
+    @When("Clico em Forms")
+    public void clicoEmForms() {
+        utils.ClassInfo.GetInstance().setResultScenario(Navegar.ClicarForms());
+        assertTrue(utils.ClassInfo.GetInstance().getLogMessage(), utils.ClassInfo.GetInstance().getResultScenario());
+    }
+
+    @Then("Visualizo a página Forms")
+    public void visualizoAPáginaForms() {
+        utils.ClassInfo.GetInstance().setResultScenario(Navegar.ValidarDirecionamentoParaFormsPage());
+        assertTrue(utils.ClassInfo.GetInstance().getLogMessage(), utils.ClassInfo.GetInstance().getResultScenario());
+    }
 }

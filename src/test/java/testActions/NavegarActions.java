@@ -18,9 +18,17 @@ public class NavegarActions {
     @CacheLookup
     static WebElement BtnElements;
 
+    @FindBy(xpath = "//*[@id='app']/div/div/div[2]/div/div[1]/div/div[3]/h5")
+    @CacheLookup
+    static WebElement BtnForms;
+
     @FindBy(xpath = "//*[@id='app']/div/div/div[1]/div")
     @CacheLookup
     static WebElement TitleElementsPage;
+
+    @FindBy(xpath = "//*[@id='app']/div/div/div[1]/div")
+    @CacheLookup
+    static WebElement TitleFormsPage;
 
     public static boolean acessarSite(String url) {
         utils.ClassDriver.StartDriver();
@@ -68,6 +76,45 @@ public class NavegarActions {
             }
         } catch (Exception e) {
             utils.ClassInfo.GetInstance().setLogMessage("ValidarDirecionamentoParaElementsPage -> " + e);
+        }
+        return false;
+    }
+
+    public boolean ClicarForms() {
+        utils.ClassDriver.GetInstance().Driver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        PageFactory.initElements(utils.ClassDriver.GetInstance().Driver(), this);
+
+        try {
+            if (BtnForms.isDisplayed()) {
+                BtnForms.click();
+                Thread.sleep(1000);
+                return true;
+            } else {
+                utils.ClassScreenshot.captureScreenshot("ClicarForms");
+                utils.ClassInfo.GetInstance().setLogMessage("ClicarForms -> Falha ao clicar em Elements");
+                return false;
+            }
+        } catch (Exception e) {
+            utils.ClassInfo.GetInstance().setLogMessage("ClicarForms -> " + e);
+        }
+        return false;
+    }
+
+    public boolean ValidarDirecionamentoParaFormsPage() {
+        //utils.ClassDriver.GetInstance().Driver().manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        PageFactory.initElements(utils.ClassDriver.GetInstance().Driver(), this);
+        utils.ClassUtilities.WaitForElementVisible(TitleElementsPage, 20);
+
+        try {
+            if (TitleFormsPage.getText().contains("Forms")) {
+                return true;
+            } else {
+                utils.ClassScreenshot.captureScreenshot("ValidarDirecionamentoParaFormsPage");
+                utils.ClassInfo.GetInstance().setLogMessage("ValidarDirecionamentoParaFormsPage -> Falha ao visualizar a página Forms");
+                return false;
+            }
+        } catch (Exception e) {
+            utils.ClassInfo.GetInstance().setLogMessage("ValidarDirecionamentoParaFormsPage -> " + e);
         }
         return false;
     }
