@@ -18,7 +18,7 @@ public class NavegarActions {
     @CacheLookup
     static WebElement BtnElements;
 
-    @FindBy(xpath = "//*[@id='app']/div/div/div[2]/div/div[1]/div/div[3]/h5")
+    @FindBy(xpath = "//*[@id='app']/div/div/div[2]/div/div[2]/div/div[3]/h5")
     @CacheLookup
     static WebElement BtnForms;
 
