@@ -62,7 +62,6 @@ public class NavegarActions {
     }
 
     public boolean ValidarDirecionamentoParaElementsPage() {
-        //utils.ClassDriver.GetInstance().Driver().manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         PageFactory.initElements(utils.ClassDriver.GetInstance().Driver(), this);
         utils.ClassUtilities.WaitForElementVisible(TitleElementsPage, 20);
 
@@ -101,7 +100,6 @@ public class NavegarActions {
     }
 
     public boolean ValidarDirecionamentoParaFormsPage() {
-        //utils.ClassDriver.GetInstance().Driver().manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         PageFactory.initElements(utils.ClassDriver.GetInstance().Driver(), this);
         utils.ClassUtilities.WaitForElementVisible(TitleElementsPage, 20);
 
