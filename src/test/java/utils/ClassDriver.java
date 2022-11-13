@@ -39,7 +39,7 @@ public class ClassDriver {
 
             driver = new ChromeDriver(options);
         } else {
-            System.setProperty("webdriver.chrome.driver", "/Users/leonardomincola/Documents/QA tools/src/webdriver/chromedriver");
+            System.setProperty("webdriver.chrome.driver", "src/webdriver/chromedriver");
 
             //Options
             ChromeOptions options = new ChromeOptions();
