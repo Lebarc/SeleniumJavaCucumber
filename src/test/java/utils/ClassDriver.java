@@ -46,7 +46,7 @@ public class ClassDriver {
             options.addArguments("start-maximized");
             options.addArguments("--window-size=1920,1080");
             options.addArguments("no-sandbox");
-            options.addArguments("headless");
+            //options.addArguments("headless");
             //options.setExperimentalOption("mobileEmulation", mobileEmulation);
 
             driver = new ChromeDriver(options);

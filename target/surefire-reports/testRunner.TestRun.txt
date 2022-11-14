@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: testRunner.TestRun
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.721 s <<< FAILURE! - in testRunner.TestRun
-runScenario(testRunner.TestRun)  Time elapsed: 0.265 s  <<< FAILURE!
-java.lang.IllegalStateException: The driver executable does not exist: /Users/leonardomincola/Documents/QA tools/src/webdriver/chromedriver
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 38.045 s <<< FAILURE! - in testRunner.TestRun
+runScenario(testRunner.TestRun)  Time elapsed: 15.712 s  <<< FAILURE!
+java.lang.AssertionError: ValidarDirecionamentoParaElementsPage -> Falha ao visualizar a página Elements
 

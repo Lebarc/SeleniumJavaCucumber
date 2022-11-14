@@ -66,7 +66,7 @@ public class NavegarActions {
         utils.ClassUtilities.WaitForElementVisible(TitleElementsPage, 20);
 
         try {
-            if (TitleElementsPage.getText().contains("Elementz")) {
+            if (TitleElementsPage.getText().contains("Elements")) {
                 return true;
             } else {
                 utils.ClassScreenshot.captureScreenshot("ValidarDirecionamentoParaElementsPage");
