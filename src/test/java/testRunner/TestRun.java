@@ -15,5 +15,4 @@ import io.cucumber.testng.CucumberOptions;
 )
 public class TestRun extends AbstractTestNGCucumberTests {
 
-
 }

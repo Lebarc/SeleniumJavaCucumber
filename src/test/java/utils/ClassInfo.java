@@ -3,7 +3,6 @@ package utils;
 public class ClassInfo {
 
     private ClassInfo() {
-
     }
 
     private Boolean resultScenario;
@@ -20,7 +19,6 @@ public class ClassInfo {
         logMessage = value;
     }
 
-
     public Boolean getResultScenario() {
         return resultScenario;
     }
@@ -35,7 +33,6 @@ public class ClassInfo {
         if (classInfoInstance == null) {
             classInfoInstance = new ClassInfo();
         }
-
         return classInfoInstance;
     }
 }

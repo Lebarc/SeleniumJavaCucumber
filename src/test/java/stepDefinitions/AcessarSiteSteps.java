@@ -13,7 +13,8 @@ public class AcessarSiteSteps {
 
     @Given("Acesso o portal {string}")
     public void acesso_o_portal(String url) {
-        Navegar.acessarSite(url);
+        utils.ClassInfo.GetInstance().setResultScenario(Navegar.acessarSite(url));
+        assertTrue(utils.ClassInfo.GetInstance().getLogMessage(), utils.ClassInfo.GetInstance().getResultScenario());
     }
 
     @When("Clico em elements")

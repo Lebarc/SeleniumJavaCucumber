@@ -7,12 +7,14 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.concurrent.TimeUnit;
 
-
 public class NavegarActions {
 
     public NavegarActions() {
-        PageFactory.initElements(utils.ClassDriver.GetInstance().Driver(), this);
     }
+
+    @FindBy(xpath = "//*[@id='teste']/div/div[2]/div/div[1]/div/div[3]/h5")
+    @CacheLookup
+    static WebElement BtnTeste;
 
     @FindBy(xpath = "//*[@id='app']/div/div/div[2]/div/div[1]/div/div[3]/h5")
     @CacheLookup
@@ -30,21 +32,20 @@ public class NavegarActions {
     @CacheLookup
     static WebElement TitleFormsPage;
 
-    public static boolean acessarSite(String url) {
-        utils.ClassDriver.StartDriver();
-        utils.ClassDriver.GetInstance().Driver().get(url);
-
+    public boolean acessarSite(String url) {
         try {
-            Thread.sleep(4000);
+            utils.ClassDriver.StartDriver();
+            utils.ClassDriver.GetInstance().Driver().get(url);
+            PageFactory.initElements(utils.ClassDriver.GetInstance().Driver(), this);
+            utils.ClassDriver.GetInstance().Driver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         } catch (Exception e) {
+            utils.ClassInfo.GetInstance().setLogMessage("Acessar o site -> " + e);
+            return false;
         }
         return true;
     }
 
     public boolean ClicarElements() {
-        utils.ClassDriver.GetInstance().Driver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        PageFactory.initElements(utils.ClassDriver.GetInstance().Driver(), this);
-
         try {
             if (BtnElements.isDisplayed()) {
                 BtnElements.click();
@@ -62,7 +63,6 @@ public class NavegarActions {
     }
 
     public boolean ValidarDirecionamentoParaElementsPage() {
-        PageFactory.initElements(utils.ClassDriver.GetInstance().Driver(), this);
         utils.ClassUtilities.WaitForElementVisible(TitleElementsPage, 20);
 
         try {
@@ -80,8 +80,6 @@ public class NavegarActions {
     }
 
     public boolean ClicarForms() {
-        utils.ClassDriver.GetInstance().Driver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        PageFactory.initElements(utils.ClassDriver.GetInstance().Driver(), this);
 
         try {
             if (BtnForms.isDisplayed()) {
@@ -100,7 +98,6 @@ public class NavegarActions {
     }
 
     public boolean ValidarDirecionamentoParaFormsPage() {
-        PageFactory.initElements(utils.ClassDriver.GetInstance().Driver(), this);
         utils.ClassUtilities.WaitForElementVisible(TitleElementsPage, 20);
 
         try {
