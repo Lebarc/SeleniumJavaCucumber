@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-11-17T14:25:17.807Z",
+        "start_timestamp": "2022-11-18T19:24:47.450Z",
         "line": 3,
         "name": "Validar o acesso a tela Elements",
         "description": "",
@@ -11,7 +11,7 @@
         "after": [
           {
             "result": {
-              "duration": 59076000,
+              "duration": 68089000,
               "status": "passed"
             },
             "match": {
@@ -24,7 +24,7 @@
         "steps": [
           {
             "result": {
-              "duration": 5810363000,
+              "duration": 6523424000,
               "status": "passed"
             },
             "line": 4,
@@ -42,7 +42,7 @@
           },
           {
             "result": {
-              "duration": 1148429000,
+              "duration": 1171380000,
               "status": "passed"
             },
             "line": 5,
@@ -54,20 +54,17 @@
           },
           {
             "result": {
-              "duration": 303880000,
-              "status": "passed"
+              "status": "undefined"
             },
             "line": 6,
-            "name": "Visualizo a página Elements",
-            "match": {
-              "location": "stepDefinitions.AcessarSiteSteps.visualizoAPáginaElements()"
-            },
+            "name": "Visualizo a página Elementst",
+            "match": {},
             "keyword": "Then "
           }
         ]
       },
       {
-        "start_timestamp": "2022-11-17T14:25:25.152Z",
+        "start_timestamp": "2022-11-18T19:24:55.248Z",
         "line": 8,
         "name": "Validar o acesso a tela Forms",
         "description": "",
@@ -75,7 +72,7 @@
         "after": [
           {
             "result": {
-              "duration": 59905000,
+              "duration": 59592000,
               "status": "passed"
             },
             "match": {
@@ -88,7 +85,7 @@
         "steps": [
           {
             "result": {
-              "duration": 5451819000,
+              "duration": 5338182000,
               "status": "passed"
             },
             "line": 9,
@@ -106,7 +103,7 @@
           },
           {
             "result": {
-              "duration": 1130127000,
+              "duration": 1138079000,
               "status": "passed"
             },
             "line": 10,
@@ -118,7 +115,7 @@
           },
           {
             "result": {
-              "duration": 303529000,
+              "duration": 336794000,
               "status": "passed"
             },
             "line": 11,
